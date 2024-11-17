@@ -1,24 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
+import React from "react";
+
+import Intro from "./components/Intro/Intro";
+import Driver from "./components/Driver/Driver";
+import Bus from "./components/Bus/Bus";
+import Summary from "./components/Summary/Summary";
+import Outro from "./components/Outro/Outro";
+
+import {useBoundStore} from "./store/store";
+
 import './App.css';
 
+const components = [
+    <Intro />,
+    <Driver />,
+    <Bus />,
+    <Summary />,
+    <Outro />,
+];
+
 function App() {
+
+  const page = useBoundStore().page;
+  const component = components[page - 1];
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {component}
     </div>
   );
 }
