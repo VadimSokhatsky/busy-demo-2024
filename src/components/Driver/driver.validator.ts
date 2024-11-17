@@ -9,7 +9,7 @@ export const DriverValidator: Validation<Driver> = {
         const age = new Date(value).getTime();
         const year = (1000 * 60 * 60 * 24 * 365);
         const result = now - age > (year * 25);
-        return value ? (result || 'You need to be of 25 years age minimum') : 'Required field';
+        return value ? (result || '25 years minimum') : 'Required field';
     },
     experience: (value: number) => value >= 2 || '2 years minimum',
     phone: (value: string) => {

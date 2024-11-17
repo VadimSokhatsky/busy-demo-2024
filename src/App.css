@@ -26,9 +26,17 @@
 }
 
 .content__main {
+    position: relative;
     padding: 16px;
     box-sizing: border-box;
     color: #d5d7e6;
+}
+
+.content__loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .content__footer {
@@ -39,4 +47,10 @@
     margin-top: auto;
     color: #454757;
     background-color: #dadcf5;
+}
+
+.fallback {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }

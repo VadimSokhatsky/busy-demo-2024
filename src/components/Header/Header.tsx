@@ -8,8 +8,8 @@ const Header = () => {
 
     const pages = [
         'Introduction',
-        'Driver Registration',
-        'Bus Registration',
+        'Driver',
+        'Bus',
         'Summary',
         'Outro',
     ]

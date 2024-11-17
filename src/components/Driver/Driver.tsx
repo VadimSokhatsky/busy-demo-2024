@@ -11,7 +11,7 @@ import './Driver.css';
 
 const DriverComponent = () => {
 
-    const { driver, setDriver, nextPage } = useBoundStore();
+    const { driver, setDriver, nextPage, prevPage } = useBoundStore();
 
     const { control, watch, handleSubmit, formState: { errors } } = useForm<Driver>({
         defaultValues: driver,
@@ -110,12 +110,7 @@ const DriverComponent = () => {
                     {errors.email && <span className="driver__error">{errors.email.message}</span>}
                 </div>
             </div>
-            <Button
-                className="driver__next"
-                htmlType="submit"
-            >
-                Next
-            </Button>
+            <Button className="driver__next" htmlType="submit">Next</Button>
         </form>
     )
 }

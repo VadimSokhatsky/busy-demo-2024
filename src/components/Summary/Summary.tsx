@@ -8,12 +8,12 @@ import './Summary.css';
 
 const Summary = () => {
 
-    const { summary, setSummary, nextPage } = useBoundStore();
+    const { summary, setSummary, nextPage, prevPage } = useBoundStore();
 
     const [value, setValue] = useState<string>(summary);
     const [hasSubmit, setHasSubmit] = useState<boolean>(false);
 
-    const error = hasSubmit ? (value ? (value.length >= 100 ? '' : 'Minimum 100') : 'Required field') : '';
+    const error = hasSubmit ? (value ? (value.length >= 100 ? '' : 'At least 100 symbols') : 'Required field') : '';
 
     useEffect(() => {
         setSummary(value);
@@ -27,7 +27,7 @@ const Summary = () => {
     return (
         <form className="summary">
             <div className="summary__field">
-                <label htmlFor="summary">A few words, why did you choose our company:</label>
+                <label htmlFor="summary">A few words, why have you chose our company:</label>
                 <Input.TextArea
                     id="summary"
                     value={value}
@@ -36,7 +36,7 @@ const Summary = () => {
                 />
                 {error && <span className="summary__error">{error}</span>}
             </div>
-            <Button className="summary__next" onClick={handleSubmit}>Next</Button>
+            <Button className="summary__next" onClick={handleSubmit}>Finish</Button>
         </form>
     )
 }

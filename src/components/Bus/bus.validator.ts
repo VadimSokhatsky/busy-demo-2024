@@ -14,7 +14,7 @@ export const BusValidator: Validation<Bus> = {
         if (value <= 0 || value > 2024) {
             result = 'Invalid year';
         } else if (value < 2010) {
-            result = 'Minimum 2010';
+            result = '2010 minimum';
         }
         return result;
     }

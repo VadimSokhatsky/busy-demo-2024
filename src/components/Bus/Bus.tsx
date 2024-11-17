@@ -12,7 +12,7 @@ import './Bus.css';
 
 const BusComponent = () => {
 
-    const { bus, setBus, nextPage } = useBoundStore();
+    const { bus, setBus, nextPage, prevPage } = useBoundStore();
 
     const { control, watch, handleSubmit, formState: { errors }, setValue } = useForm<Bus>({
         defaultValues: bus,
@@ -24,7 +24,10 @@ const BusComponent = () => {
                 const key = name as keyof Bus;
                 const value = bus[key] as string | number;
                 setBus(key, value);
-                if (name === 'brand') setValue('model', BUSES[value][0]);
+                if (name === 'brand') {
+                    setValue('model', BUSES[value][0]);
+                    setBus('model', BUSES[value][0]);
+                }
             }
         });
         return () => subscription.unsubscribe();
@@ -90,7 +93,7 @@ const BusComponent = () => {
                     {errors.year && <span className="driver__error">{errors.year.message}</span>}
                 </div>
             </div>
-            <Button className="driver__next" htmlType="submit">Next</Button>
+            <Button className="bus__next" htmlType="submit">Next</Button>
         </form>
     )
 }
