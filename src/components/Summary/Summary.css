@@ -1,3 +1,27 @@
 .summary {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 496px;
+}
 
+.summary__field {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 600px;
+}
+
+
+.summary__error {
+    position: absolute;
+    bottom: -20px;
+    right: 0;
+    color: #fca89f;
+}
+
+.summary__next {
+    width: 160px;
 }
