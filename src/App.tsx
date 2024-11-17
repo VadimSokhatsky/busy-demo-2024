@@ -24,8 +24,14 @@ function App() {
   const component = components[page - 1];
 
   return (
-    <div>
-      {component}
+    <div className="app">
+        <div className="content">
+            <header className="content__header"></header>
+            <main className="content__main">
+                {component}
+            </main>
+            <footer className="content__footer"></footer>
+        </div>
     </div>
   );
 }
