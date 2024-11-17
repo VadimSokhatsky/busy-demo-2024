@@ -29,7 +29,6 @@ const DriverComponent = () => {
         return () => subscription.unsubscribe();
     }, [watch]);
 
-
     const onSubmit = () => {
         if (!Object.keys(errors).length) nextPage();
     }

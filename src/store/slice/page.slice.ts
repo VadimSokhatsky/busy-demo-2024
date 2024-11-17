@@ -7,7 +7,7 @@ export type PageSlice = {
 }
 
 export const createPageSlice: StateCreator<PageSlice> = (set) => ({
-    page: 1,
+    page: 3,
     nextPage: () => set( (state: PageSlice) => ({ page: state.page + 1 }) ),
     reset: () => set( () => ({ page: 1 }) ),
 })
