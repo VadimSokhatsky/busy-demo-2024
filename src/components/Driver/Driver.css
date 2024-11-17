@@ -15,9 +15,17 @@
 }
 
 .driver__field {
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: 4px;
+}
+
+.driver__error {
+    position: absolute;
+    bottom: -20px;
+    right: 0;
+    color: #fca89f;
 }
 
 .driver__next {

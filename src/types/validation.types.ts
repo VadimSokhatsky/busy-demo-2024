@@ -1,0 +1,1 @@
+export type Validation<T> = Record<keyof T, (value: any) => string | boolean>;
