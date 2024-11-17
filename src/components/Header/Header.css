@@ -1,0 +1,20 @@
+.header {
+    display: flex;
+}
+
+.header__page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 160px;
+    height: 48px;
+    border-left: 1px solid black;
+}
+
+.header__page:first-child {
+    border-left: none;
+}
+
+.header__page--active {
+    border: 2px solid black;
+}

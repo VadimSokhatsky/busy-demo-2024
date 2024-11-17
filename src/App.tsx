@@ -1,5 +1,7 @@
 import React from "react";
 
+import Header from "./components/Header/Header";
+
 import Intro from "./components/Intro/Intro";
 import Driver from "./components/Driver/Driver";
 import Bus from "./components/Bus/Bus";
@@ -20,13 +22,15 @@ const components = [
 
 function App() {
 
-  const page = useBoundStore().page;
+  const { page } = useBoundStore();
   const component = components[page - 1];
 
   return (
     <div className="app">
         <div className="content">
-            <header className="content__header"></header>
+            <header className="content__header">
+                <Header />
+            </header>
             <main className="content__main">
                 {component}
             </main>
