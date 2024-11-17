@@ -4,11 +4,11 @@ import {Bus, BUS_INITIAL} from "../../types/bus.types";
 export type BusSlice = {
     bus: Bus;
     setBus: (key: keyof Bus, value: string | number) => void;
-    reset: () => void;
+    resetBus: () => void;
 }
 
 export const createBusSlice: StateCreator<BusSlice> = (set) => ({
     bus: BUS_INITIAL,
     setBus: (key, value) => set( (state) => ({ bus: { ...state.bus, [key]: value } }) ),
-    reset: () => set( () => ({ bus: BUS_INITIAL }) )
+    resetBus: () => set( () => ({ bus: BUS_INITIAL }) )
 })

@@ -1,1 +1,33 @@
-.outro {}
+.outro {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 496px;
+}
+
+.outro__fields {
+    display: grid;
+    grid-template-areas:
+        "a  b"
+        "c  c"
+    ;
+    gap: 40px 16px;
+}
+
+.outro__column {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.outro__field {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.outro__prop {
+    font-weight: 600;
+}
