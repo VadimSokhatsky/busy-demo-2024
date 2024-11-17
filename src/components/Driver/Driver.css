@@ -1,3 +1,25 @@
 .driver {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 496px;
+}
 
+.driver__fields {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.driver__field {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.driver__next {
+    width: 160px;
 }
