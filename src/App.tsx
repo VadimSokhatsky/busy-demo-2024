@@ -34,7 +34,9 @@ function App() {
             <main className="content__main">
                 {component}
             </main>
-            <footer className="content__footer"></footer>
+            <footer className="content__footer">
+                Developer by Vadym Sokhatskyi, 2024
+            </footer>
         </div>
     </div>
   );
