@@ -31,7 +31,9 @@ function App() {
                       </Suspense>
                   </main>
                   <footer className="content__footer">
-                      Developed by Vadym Sokhatskyi, 2024
+                      <a className="link" href="https://github.com/VadimSokhatsky/busy-demo-2024" target="_blank">
+                          https://github.com/VadimSokhatsky/busy-demo-2024
+                      </a>
                   </footer>
               </div>
           </div>

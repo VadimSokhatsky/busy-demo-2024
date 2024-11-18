@@ -45,8 +45,11 @@
     align-items: center;
     height: 24px;
     margin-top: auto;
-    color: #454757;
     background-color: #dadcf5;
+}
+
+.link {
+    color: #454757 !important;
 }
 
 .fallback {
